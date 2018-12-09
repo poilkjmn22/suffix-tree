@@ -1,0 +1,21 @@
+{
+  "name": "suffix-tree",
+  "version": "1.0.0",
+  "description": "suffix-tree js implemention",
+  "main": "./index.js",
+  "scripts": {
+    "test": "node ./test.js",
+    "dev": "webpack-dev-server"
+  },
+  "keywords": [
+    "data-structure",
+    "suffix-tree"
+  ],
+  "author": "fangqi",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
