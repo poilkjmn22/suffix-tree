@@ -24,12 +24,11 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '/dist'),
-    publicPath: '/dist/'
+    path: '/',
+    publicPath: '/'
   },
   devServer: {
     hot: true,
-    port: 4001,
-    index: './dist/index.html'
+    port: 4001
   }
 }
