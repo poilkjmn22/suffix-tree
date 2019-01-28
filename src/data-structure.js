@@ -220,7 +220,7 @@ class Tree {
         }
         if (predicate.call(this, tree) === true) {
             res = tree;
-            return;
+            return res;
         };
         function lookUp(tree, cb) {
             (tree.children || []).forEach(function(node) {
@@ -246,7 +246,7 @@ class Tree {
         }
         if (predicate.call(this, tree) === true) {
             res = tree;
-            return;
+            return res;
         };
         var processing = new Stack();
         processing.pushMany(tree.children);
@@ -351,13 +351,9 @@ class Tree {
         var currHierarchy = hierarchy[0]
         var nextRoot = null;
         if(!isTopRoot){
-          if(hierarchy.length === 0){
-            nextRoot = root;
-          }else{
-            nextRoot = root.children.find(function(rc){
-              return rc.levelName === d[currHierarchy]
-            })
-          }
+          nextRoot = root.children.find(function(rc){
+            return rc.levelName === d[currHierarchy]
+          })
           if(!nextRoot){
             nextRoot = {
               levelName: d[currHierarchy],
