@@ -76,15 +76,6 @@ class Stack {
         this.length--;
         return this.list.pop();
     }
-    shift() {
-        // Don't do anything if we don't have any items.
-        if (this.length === 0) return;
-
-        // Pop the last item off the end of the list and return the value.
-        this.length--;
-        return this.list.shift();
-    }
-
     /**
      * We're also going to add a function in order to view the item at the top of
      * the stack without removing it from the stack.
